@@ -48,4 +48,12 @@ public class MemoController {
         int result = memoService.updMemo(req);
         return result == 1 ? "성공" : "실패";
     }
+
+    @DeleteMapping("/memo")
+    public String deleteMemo(@RequestParam int id) {
+        System.out.println("deleteMemo: " + id);
+        int result = memoService.delMemo(id);
+        return result == 1 ? "성공" : "실패";
+    }
+
 }

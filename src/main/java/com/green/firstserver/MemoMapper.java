@@ -13,9 +13,10 @@ import java.util.List;
 
 @Mapper
 public interface MemoMapper {
-    //insert, update, delete 작업은 메소드 만들 때 리턴타입 int
+    //insert, update, delete 작업은 메소드 만들 때 리턴 타입 int
     int insMemo(MemoPostReq req);
     List<MemoGetRes> selMemoList();
     MemoGetOneRes selMemo(int id);
     int updMemo(MemoPutReq req);
+    int delMemo(int id);
 }

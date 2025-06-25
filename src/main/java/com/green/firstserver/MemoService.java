@@ -32,4 +32,8 @@ public class MemoService {
     public int updMemo(MemoPutReq req) {
         return memoMapper.updMemo(req);
     }
+
+    public int delMemo(int id) {
+        return memoMapper.delMemo(id);
+    }
 }
