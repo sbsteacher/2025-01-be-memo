@@ -1,9 +1,9 @@
 package com.green.firstserver;
 
-
 import com.green.firstserver.model.MemoGetOneRes;
 import com.green.firstserver.model.MemoGetRes;
 import com.green.firstserver.model.MemoPostReq;
+import com.green.firstserver.model.MemoPutReq;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,5 +40,12 @@ public class MemoController {
     public MemoGetOneRes getMemo(@PathVariable int id) {
         System.out.println("getMemo: " + id);
         return memoService.selMemo(id);
+    }
+
+    @PutMapping("/memo")
+    public String putMemo(@RequestBody MemoPutReq req) {
+        System.out.println("postMemo: " + req);
+        int result = memoService.updMemo(req);
+        return result == 1 ? "성공" : "실패";
     }
 }

@@ -21,5 +21,11 @@
          WHERE id = #{id}
     </select>
 
-
+    <!-- 수정하고 싶어요. 원래값? id,  -->
+    <update id="updMemo">
+        UPDATE memo
+           SET title = #{title}
+             , content = #{content}
+         WHERE id = #{id}
+    </update>
 </mapper>
