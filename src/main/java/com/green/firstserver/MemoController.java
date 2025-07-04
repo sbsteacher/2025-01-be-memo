@@ -31,6 +31,11 @@ public class MemoController {
         return result == 1 ? "성공" : "실패";
     }
 
+    @GetMapping("/ddd")
+    public String getDdd() {
+        return "ddd";
+    }
+
     @GetMapping("/memo")
     public List<MemoGetRes> getMemo() {
         return memoService.selMemoList();
