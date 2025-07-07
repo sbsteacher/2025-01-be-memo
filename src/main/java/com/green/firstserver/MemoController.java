@@ -35,6 +35,10 @@ public class MemoController {
     public String getDdd() {
         return "ddd";
     }
+    @GetMapping("/sss")
+    public String getSss() {
+        return "sss";
+    }
 
     @GetMapping("/memo")
     public List<MemoGetRes> getMemo() {
